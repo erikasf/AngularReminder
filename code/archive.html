@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="egghead">
+<head>
+    <title>Erika's Attempt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/egghead.css"/>
+</head>
+<body ng-controller="ArchiveCtrl">
+	<h1 class = "title">Past Due, Completed and Archived</h1>
+    <table class="table edit">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Count</th>
+			<!-- added this -->
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="(id, item) in items">
+            <td><input type="text" ng-model="item.name" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.description" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.count" ng-blur="updateItem(id)"/></td>
+			<td><input type ="datetime-local"ng-model="item.datetime-local" ng-blue="updateItem(id)/>"</td>
+			</tr>
+		</tbody>
+          
